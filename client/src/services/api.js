@@ -97,4 +97,15 @@ export const adminAPI = {
   getAllSymptoms: (params) => api.get('/admin/symptoms', { params }),
 };
 
+export const medicineAPI = {
+  // Image scan
+  scan: (formData) => api.post('/medicine/scan', formData, {
+    headers: { 'Content-Type': 'multipart/form-data' }
+  }),
+  // Text search
+  searchByName: (medicineName) => api.post('/medicine/scan', { medicineName }),
+  // Drug interaction check
+  checkInteraction: (medicines) => api.post('/medicine/interaction', { medicines }),
+};
+
 export default api;

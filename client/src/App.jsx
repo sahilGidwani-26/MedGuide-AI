@@ -16,6 +16,8 @@ import MedicalReportsPage from './pages/MedicalReportsPage';
 import ProfilePage from './pages/ProfilePage';
 import DoctorsPage from './pages/DoctorsPage';
 import AdminDashboardPage from './pages/AdminDashboardPage';
+import MedicineScannerPage from './pages/MedicineScannerPage';
+import FirstAidGuidePage from './pages/FirstAidGuidePage';
 
 // Layout
 import MainLayout from './components/layout/MainLayout';
@@ -67,6 +69,8 @@ function AppRoutes() {
           <Route path="/live-map" element={<LiveMapPage />} />
           <Route path="/chat" element={<ChatAssistantPage />} />
           <Route path="/reports" element={<MedicalReportsPage />} />
+          <Route path="/medicine-scanner" element={<MedicineScannerPage />} />
+          <Route path="/first-aid" element={<FirstAidGuidePage />} />
           <Route path="/doctors" element={<DoctorsPage />} />
           <Route path="/profile" element={<ProfilePage />} />
         </Route>

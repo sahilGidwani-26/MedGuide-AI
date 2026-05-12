@@ -7,6 +7,7 @@ const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const rateLimit = require('express-rate-limit');
 const { Server } = require('socket.io');
+
 require('dotenv').config();
 
 const connectDB = require('./config/db');
@@ -23,6 +24,8 @@ const chatRoutes = require('./routes/chat');
 const doctorRoutes = require('./routes/doctor');
 const adminRoutes = require('./routes/admin');
 const notificationRoutes = require('./routes/notification');
+const medicineRoutes = require('./routes/medicine');
+const firstAidRoutes = require('./routes/firstaid');
 
 const app = express();
 const server = http.createServer(app);
@@ -111,7 +114,8 @@ app.use('/api/chat', aiLimiter, chatRoutes);
 app.use('/api/doctors', doctorRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/notifications', notificationRoutes);
-
+app.use('/api/medicine', aiLimiter, medicineRoutes);
+app.use('/api/first-aid', firstAidRoutes);
 // 404 Handler
 app.use('*', (req, res) => {
   res.status(404).json({
