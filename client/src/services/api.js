@@ -108,4 +108,46 @@ export const medicineAPI = {
   checkInteraction: (medicines) => api.post('/medicine/interaction', { medicines }),
 };
 
+export const vitalsAPI = {
+  // Sab records lao (last N days)
+  getAll: (days = 90) => api.get('/vitals', { params: { days } }),
+ 
+  // Naya vital log karo
+  log: (data) => api.post('/vitals', data),
+ 
+  // Record delete karo
+  delete: (id) => api.delete(`/vitals/${id}`),
+ 
+  // AI health summary
+  getSummary: () => api.get('/vitals/summary'),
+};
+
+
+export const mentalHealthAPI = {
+  // ── Full data (all tabs history) ──────────────────────────
+  getData:    ()           => api.get('/mental-health'),
+  getSummary: ()           => api.get('/mental-health/summary'),
+ 
+  // ── Mood ──────────────────────────────────────────────────
+  logMood:    (data)       => api.post  ('/mental-health/mood', data),
+  clearMoods: ()           => api.delete('/mental-health/mood'),
+ 
+  // ── Stress ────────────────────────────────────────────────
+  logStress:   (data)      => api.post  ('/mental-health/stress', data),
+  clearStress: ()          => api.delete('/mental-health/stress'),
+ 
+  // ── Breathing ─────────────────────────────────────────────
+  logBreathing:   (data)   => api.post  ('/mental-health/breathing', data),
+  clearBreathing: ()       => api.delete('/mental-health/breathing'),
+ 
+  // ── PHQ-9 ─────────────────────────────────────────────────
+  logPhq9:   (data)        => api.post  ('/mental-health/phq9', data),
+  clearPhq9: ()            => api.delete('/mental-health/phq9'),
+ 
+  // ── AI Chat ───────────────────────────────────────────────
+  sendMessage: (message)   => api.post  ('/mental-health/chat', { message }),
+  clearChat:   ()          => api.delete('/mental-health/chat'),
+};
+ 
+
 export default api;

@@ -5,7 +5,7 @@ import {
   LayoutDashboard, Activity, MapPin, Map, MessageCircle,
   FileText, User, Stethoscope, AlertTriangle, Menu, X,
   LogOut, ChevronRight, Shield, Pill, HeartPulse,
-  ChevronLeft,
+  ChevronLeft, Users, BarChart2, Brain
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
@@ -20,6 +20,10 @@ const navItems = [
   { path: '/medicine-scanner', icon: Pill,             label: 'Medicine Scanner' },
   { path: '/first-aid',        icon: HeartPulse,       label: 'First Aid Guide' },
   { path: '/profile',          icon: User,             label: 'My Profile' },
+  { path: '/family-health', icon: Users, label: 'Family Health' },
+  { path: '/vitals', icon: BarChart2, label: 'Health Vitals' },
+  { path: '/mental-health', icon: Brain, label: 'Mental Health' }
+
 ];
 
 export default function MainLayout() {
