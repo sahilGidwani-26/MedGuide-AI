@@ -17,7 +17,7 @@ import ProfilePage from './pages/ProfilePage';
 import DoctorsPage from './pages/DoctorsPage';
 import AdminDashboardPage from './pages/AdminDashboardPage';
 import MedicineScannerPage from './pages/MedicineScannerPage';
-import FirstAidGuidePage from './pages/FirstAidGuidePage';
+import FirstAidGuidePage from './pages/FirstGuidepage';
 import FamilyHealthPage from './pages/FamilyHealthPage';
 import HealthVitalsPage from './pages/HealthVitalsPage';
 import MentalHealthPage from './pages/MentalHealthPage';
