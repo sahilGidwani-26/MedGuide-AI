@@ -29,6 +29,8 @@ const firstAidRoutes = require('./routes/firstaid');
 const familyRoutes = require('./routes/family');
 const vitalsRoutes = require('./routes/vitals');
 const mentalHealthRoutes = require('./routes/mentalHealth');
+const medicineReminderRoutes = require('./routes/medicineReminder');
+const bloodDonorRoutes       = require('./routes/bloodDonor');
 
 const app = express();
 const server = http.createServer(app);
@@ -122,6 +124,8 @@ app.use('/api/first-aid', firstAidRoutes);
 app.use('/api/family', familyRoutes);
 app.use('/api/vitals', vitalsRoutes);
 app.use('/api/mental-health', mentalHealthRoutes);
+app.use('/api/medicine-reminders', medicineReminderRoutes);
+app.use('/api/blood',              bloodDonorRoutes);
 
 // 404 Handler
 app.use('*', (req, res) => {

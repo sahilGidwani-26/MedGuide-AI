@@ -21,6 +21,8 @@ import FirstAidGuidePage from './pages/FirstGuidepage';
 import FamilyHealthPage from './pages/FamilyHealthPage';
 import HealthVitalsPage from './pages/HealthVitalsPage';
 import MentalHealthPage from './pages/MentalHealthPage';
+import MedicineReminderPage from './pages/MedicineReminderPage';
+  import BloodDonorPage       from './pages/BloodDonorPage';
 
 // Layout
 import MainLayout from './components/layout/MainLayout';
@@ -75,6 +77,9 @@ function AppRoutes() {
           <Route path="/medicine-scanner" element={<MedicineScannerPage />} />
             <Route path="/vitals" element={<HealthVitalsPage />} />
             <Route path="/mental-health" element={<MentalHealthPage />} />
+            <Route path="/medicine-reminder" element={<MedicineReminderPage />} />
+  <Route path="/blood-donor"       element={<BloodDonorPage />} />
+
           <Route path="/family-health" element={<FamilyHealthPage />} />
           <Route path="/first-aid" element={<FirstAidGuidePage />} />
           <Route path="/doctors" element={<DoctorsPage />} />

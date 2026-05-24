@@ -7,6 +7,7 @@ import {
   LogOut, ChevronRight, Shield, Pill, HeartPulse,
   ChevronLeft, Users, BarChart2, Brain
 } from 'lucide-react';
+import { Droplets, AlarmClock } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
 const navItems = [
@@ -22,7 +23,10 @@ const navItems = [
   { path: '/profile',          icon: User,             label: 'My Profile' },
   { path: '/family-health', icon: Users, label: 'Family Health' },
   { path: '/vitals', icon: BarChart2, label: 'Health Vitals' },
-  { path: '/mental-health', icon: Brain, label: 'Mental Health' }
+  { path: '/mental-health', icon: Brain, label: 'Mental Health' },
+   { path: '/medicine-reminder', icon: AlarmClock, label: 'Medicine Reminder' },
+  { path: '/blood-donor',       icon: Droplets,   label: 'Blood Donor' },
+  
 
 ];
 

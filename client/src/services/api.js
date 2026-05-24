@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
+const API_BASE = 'https://medguide-ai-p74q.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_BASE,
@@ -147,6 +147,41 @@ export const mentalHealthAPI = {
   // ── AI Chat ───────────────────────────────────────────────
   sendMessage: (message)   => api.post  ('/mental-health/chat', { message }),
   clearChat:   ()          => api.delete('/mental-health/chat'),
+};
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ADD THESE EXPORTS TO YOUR EXISTING src/services/api.js
+// ─────────────────────────────────────────────────────────────────────────────
+
+// ─── Medicine Reminders ───────────────────────────────────────
+export const medicineReminderAPI = {
+  getAll:        ()           => api.get('/medicine-reminders'),
+  getOne:        (id)         => api.get(`/medicine-reminders/${id}`),
+  create:        (data)       => api.post('/medicine-reminders', data),
+  update:        (id, data)   => api.put(`/medicine-reminders/${id}`, data),
+  delete:        (id)         => api.delete(`/medicine-reminders/${id}`),
+  logDose:       (id, data)   => api.post(`/medicine-reminders/${id}/dose`, data),
+  getAdherence:  ()           => api.get('/medicine-reminders/stats/adherence'),
+};
+
+// ─── Blood Donor ──────────────────────────────────────────────
+export const bloodAPI = {
+  // Donor profile
+  getMyProfile:       ()       => api.get('/blood/donor/me'),
+  registerDonor:      (data)   => api.post('/blood/donor/register', data),
+  toggleAvailability: ()       => api.patch('/blood/donor/availability'),
+
+  // Search donors
+  searchDonors: (params) => api.get('/blood/donors/search', { params }),
+  // params: { bloodGroup?, city?, lat?, lng?, radius? }
+
+  // Requests
+  getRequests:    (params) => api.get('/blood/requests', { params }),
+  getMyRequests:  ()       => api.get('/blood/requests/mine'),
+  createRequest:  (data)   => api.post('/blood/requests', data),
+  respondRequest: (id)     => api.post(`/blood/requests/${id}/respond`),
+  updateStatus:   (id, status) => api.patch(`/blood/requests/${id}/status`, { status }),
 };
  
 
