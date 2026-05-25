@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   LayoutDashboard, Activity, MapPin, Map, MessageCircle,
   FileText, User, Stethoscope, AlertTriangle, Menu, X,
-  LogOut, ChevronRight, Shield, Pill, HeartPulse,
+  LogOut, ChevronRight, Shield, Pill,
   ChevronLeft, Users, BarChart2, Brain
 } from 'lucide-react';
 import { Droplets, AlarmClock } from 'lucide-react';
@@ -19,7 +19,7 @@ const navItems = [
   { path: '/doctors',          icon: Stethoscope,      label: 'Find Doctors' },
   { path: '/reports',          icon: FileText,         label: 'Medical Reports' },
   { path: '/medicine-scanner', icon: Pill,             label: 'Medicine Scanner' },
-  { path: '/first-aid',        icon: HeartPulse,       label: 'First Aid Guide' },
+  // { path: '/first-aid',        icon: HeartPulse,       label: 'First Aid Guide' },
   { path: '/profile',          icon: User,             label: 'My Profile' },
   { path: '/family-health', icon: Users, label: 'Family Health' },
   { path: '/vitals', icon: BarChart2, label: 'Health Vitals' },
