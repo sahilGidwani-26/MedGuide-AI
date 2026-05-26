@@ -210,20 +210,7 @@ medguide-ai/
 
 ## 🚀 Deployment
 
-### Backend → Render (Free)
-1. Push `server/` to GitHub
-2. Go to [render.com](https://render.com) → New Web Service
-3. Connect GitHub repo → Set root directory: `server`
-4. Build command: `npm install`
-5. Start command: `npm start`
-6. Add all environment variables
-
-### Frontend → Vercel (Free)
-1. Push `client/` to GitHub
-2. Go to [vercel.com](https://vercel.com) → New Project
-3. Set root directory: `client`
-4. Add environment variable: `VITE_API_URL=https://your-render-url.onrender.com/api`
-5. Deploy!
+Live Demo  -  https://med-guide-ai-two.vercel.app/
 
 ---
 
